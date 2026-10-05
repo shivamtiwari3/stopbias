@@ -1,0 +1,23 @@
+[project]
+name = "stopbias"
+version = "0.1.0"
+description = "Do offline full-duplex stop-latency numbers survive the telephony transport? A validity study."
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.14",
+    "soundfile>=0.12",
+    "pandas>=2.2",
+    "matplotlib>=3.9",
+    "torch>=2.4",
+    "torchaudio>=2.4",
+    "silero-vad>=5.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

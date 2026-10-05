@@ -1,0 +1,63 @@
+detector,viewpoint,condition,label,n,n_ok,miss_rate,bulk_delay_ms,stop_err_median_ms,stop_err_ci_lo,stop_err_ci_hi,stop_err_iqr_ms,stop_abs_err_p95_ms,onset_err_median_ms,offset_err_median_ms,rel_bias_median_ms,rel_bias_ci_lo,rel_bias_ci_hi,wilcoxon_p,n_paired,agent_segments_median
+energy,local_user,nb8_ulaw,"8 kHz G.711 mu-law, VAD at 8 kHz",60,60,0.0,0.0,33.14,32.46,33.98,3.6,37.41,-16.06,16.95,0.0,0.0,0.0,0.317,60,1.0
+energy,local_user,nb8_ulaw_up16,"8 kHz G.711 mu-law, upsampled to 16 kHz before VAD",60,60,0.0,0.0,33.14,32.46,33.98,3.6,37.41,-16.06,16.95,0.0,0.0,0.0,0.317,60,1.0
+energy,local_user,nb8_alaw,"8 kHz G.711 A-law, VAD at 8 kHz",60,60,0.0,0.0,33.14,32.46,33.98,3.6,37.41,-16.06,16.95,0.0,0.0,0.0,,60,1.0
+energy,local_user,nb8_ulaw_band,8 kHz G.711 mu-law + 300-3400 Hz PSTN band,60,60,0.0,0.0,34.2,33.01,35.25,4.3,38.91,-16.06,18.09,0.0,0.0,0.0,0.39,60,1.0
+energy,local_user,nb8_ulaw_loss1,8 kHz mu-law + 1% frame loss (zero-fill),60,60,0.0,0.0,33.01,32.29,33.9,3.54,37.41,-16.06,16.91,0.0,0.0,0.0,0.18,60,1.0
+energy,local_user,nb8_ulaw_loss3,8 kHz mu-law + 3% frame loss (zero-fill),60,60,0.0,0.0,33.01,32.29,33.9,3.69,37.41,-16.06,16.95,0.0,0.0,0.0,0.109,60,1.0
+energy,local_user,nb8_ulaw_loss5,8 kHz mu-law + 5% frame loss (zero-fill),60,60,0.0,0.0,32.63,31.7,33.56,3.98,36.8,-16.06,16.65,0.0,0.0,0.0,0.0178,60,1.0
+energy,local_user,nb8_ulaw_loss5_burst,"8 kHz mu-law + 5% bursty loss (Gilbert, zero-fill)",60,60,0.0,0.0,32.92,32.12,33.73,3.47,37.21,-16.06,16.86,0.0,0.0,0.0,0.109,60,1.0
+energy,local_user,nb8_ulaw_loss5_hold,8 kHz mu-law + 5% frame loss (zero-order-hold PLC),60,60,0.0,0.0,33.43,32.54,34.15,3.83,50.41,-16.06,16.99,0.0,0.0,0.0,0.0578,60,1.0
+energy,local_user,nb8_ulaw_jb60,8 kHz mu-law + 60 ms fixed jitter buffer,60,60,0.0,60.0,93.14,92.46,93.98,3.6,97.21,-16.06,76.95,60.0,60.0,60.0,4.55e-12,60,1.0
+energy,local_user,opus_nb_12k,"Opus 12 kbps, 4 kHz cutoff, at 8 kHz",60,60,0.0,0.09,47.12,42.12,48.9,16.25,56.2,-16.06,30.76,15.0,10.0,15.0,9.74e-08,60,1.0
+energy,local_user,opus_wb_24k,"Opus 24 kbps, 8 kHz cutoff, at 16 kHz",60,60,0.0,0.0,43.81,39.91,46.7,12.86,52.63,-16.06,26.57,10.0,5.0,12.5,2.01e-07,60,1.0
+energy,local_user,nb8_ulaw_snr20,8 kHz mu-law + 20 dB SNR line noise,60,60,0.0,0.0,25.34,0.59,29.96,41.61,413.86,-16.06,8.31,-10.0,-30.0,-5.0,7.3e-09,60,1.0
+energy,local_user,pstn_typical,Full PSTN leg: band + mu-law + 1% loss + 40 ms jitter,60,60,0.0,40.0,74.19,73.01,75.25,4.3,78.91,-16.06,58.09,40.0,40.0,40.0,9.72e-12,60,1.0
+energy,local_user,pstn_poor,Degraded PSTN leg: band + mu-law + 5% bursty loss + 80 ms jitter,60,60,0.0,80.0,113.47,112.33,115.08,4.98,118.74,-16.06,97.5,80.0,80.0,80.0,3.64e-12,60,1.0
+energy,wire,ref_16k,16 kHz PCM (offline file),60,60,0.0,0.0,33.14,32.46,33.98,3.6,37.41,-16.06,16.95,0.0,0.0,0.0,,60,1.0
+energy,wire,nb8_ulaw,"8 kHz G.711 mu-law, VAD at 8 kHz",60,60,0.0,0.0,32.75,31.95,33.56,3.67,37.41,-15.72,16.95,0.0,0.0,0.0,0.0235,60,1.0
+energy,wire,nb8_ulaw_up16,"8 kHz G.711 mu-law, upsampled to 16 kHz before VAD",60,60,0.0,0.0,32.75,31.95,33.56,3.67,37.41,-15.72,16.95,0.0,0.0,0.0,0.0235,60,1.0
+energy,wire,nb8_alaw,"8 kHz G.711 A-law, VAD at 8 kHz",60,60,0.0,0.0,32.84,32.03,33.6,3.47,37.41,-15.8,16.95,0.0,0.0,0.0,0.0656,60,1.0
+energy,wire,nb8_ulaw_band,8 kHz G.711 mu-law + 300-3400 Hz PSTN band,60,60,0.0,0.0,32.08,30.42,33.3,6.4,38.06,-14.53,18.09,0.0,0.0,0.0,0.000774,60,1.0
+energy,wire,nb8_ulaw_loss1,8 kHz mu-law + 1% frame loss (zero-fill),60,60,0.0,0.0,32.67,31.86,33.47,3.73,37.41,-15.72,16.91,0.0,0.0,0.0,0.016,60,1.0
+energy,wire,nb8_ulaw_loss3,8 kHz mu-law + 3% frame loss (zero-fill),60,60,0.0,0.0,32.58,31.78,33.47,4.11,37.41,-15.72,16.95,0.0,0.0,0.0,0.00716,60,1.0
+energy,wire,nb8_ulaw_loss5,8 kHz mu-law + 5% frame loss (zero-fill),60,60,0.0,0.0,31.99,31.19,33.05,4.13,36.64,-15.72,16.65,0.0,0.0,0.0,0.00137,60,1.0
+energy,wire,nb8_ulaw_loss5_burst,"8 kHz mu-law + 5% bursty loss (Gilbert, zero-fill)",60,60,0.0,0.0,32.37,31.52,33.05,4.24,37.42,-15.72,16.86,0.0,0.0,0.0,0.00478,60,1.0
+energy,wire,nb8_ulaw_loss5_hold,8 kHz mu-law + 5% frame loss (zero-order-hold PLC),60,60,0.0,0.0,32.84,32.03,33.98,4.3,50.41,-15.72,16.99,0.0,0.0,0.0,0.778,60,1.0
+energy,wire,nb8_ulaw_jb60,8 kHz mu-law + 60 ms fixed jitter buffer,60,60,0.0,60.0,32.75,31.95,33.56,3.67,37.41,44.28,76.95,0.0,0.0,0.0,0.0235,60,1.0
+energy,wire,opus_nb_12k,"Opus 12 kbps, 4 kHz cutoff, at 8 kHz",60,60,0.0,0.09,45.59,41.86,48.64,16.1,55.94,-15.47,30.76,12.5,10.0,15.0,1.24e-06,60,1.0
+energy,wire,opus_wb_24k,"Opus 24 kbps, 8 kHz cutoff, at 16 kHz",60,60,0.0,0.0,43.18,39.24,46.7,13.01,52.63,-15.8,26.57,10.0,5.0,12.5,1.49e-07,60,1.0
+energy,wire,nb8_ulaw_snr20,8 kHz mu-law + 20 dB SNR line noise,60,60,0.0,0.0,-17.16,-37.42,1.52,90.04,428.86,1.82,8.31,-50.0,-70.0,-30.0,1.62e-11,60,1.0
+energy,wire,pstn_typical,Full PSTN leg: band + mu-law + 1% loss + 40 ms jitter,60,60,0.0,40.0,32.08,30.42,33.3,6.4,38.06,25.47,58.09,0.0,0.0,0.0,0.000774,60,1.0
+energy,wire,pstn_poor,Degraded PSTN leg: band + mu-law + 5% bursty loss + 80 ms jitter,60,60,0.0,80.0,30.3,25.89,32.03,22.29,59.76,65.85,97.5,-5.0,-5.0,0.0,4.48e-06,60,1.0
+silero,local_user,nb8_ulaw,"8 kHz G.711 mu-law, VAD at 8 kHz",60,60,0.0,0.0,3.05,-6.37,13.15,38.3,96.57,14.51,15.93,0.0,0.0,0.0,0.000427,60,1.0
+silero,local_user,nb8_ulaw_up16,"8 kHz G.711 mu-law, upsampled to 16 kHz before VAD",60,60,0.0,0.0,1.29,-9.53,8.81,35.64,83.52,14.51,15.05,0.0,0.0,0.0,0.0641,60,1.0
+silero,local_user,nb8_alaw,"8 kHz G.711 A-law, VAD at 8 kHz",60,60,0.0,0.0,6.98,-4.47,17.9,44.95,100.5,14.51,19.59,0.0,0.0,0.0,7.79e-05,60,1.0
+silero,local_user,nb8_ulaw_band,8 kHz G.711 mu-law + 300-3400 Hz PSTN band,60,60,0.0,0.0,51.59,24.0,80.0,83.49,159.45,14.51,83.19,64.0,32.0,64.0,1.35e-08,60,1.0
+silero,local_user,nb8_ulaw_loss1,8 kHz mu-law + 1% frame loss (zero-fill),60,60,0.0,0.0,3.05,-6.37,13.15,38.3,102.2,14.51,15.93,0.0,0.0,0.0,0.00044,60,1.0
+silero,local_user,nb8_ulaw_loss3,8 kHz mu-law + 3% frame loss (zero-fill),60,60,0.0,0.0,7.93,-0.54,18.98,61.46,101.81,14.51,23.05,0.0,0.0,32.0,2.38e-05,60,1.0
+silero,local_user,nb8_ulaw_loss5,8 kHz mu-law + 5% frame loss (zero-fill),60,60,0.0,0.0,17.7,5.02,40.81,87.51,119.91,14.51,32.47,32.0,0.0,32.0,1.36e-06,60,1.0
+silero,local_user,nb8_ulaw_loss5_burst,"8 kHz mu-law + 5% bursty loss (Gilbert, zero-fill)",60,60,0.0,0.0,25.7,7.05,68.41,97.97,129.58,14.51,56.51,32.0,0.0,64.0,6.44e-06,60,1.0
+silero,local_user,nb8_ulaw_loss5_hold,8 kHz mu-law + 5% frame loss (zero-order-hold PLC),60,60,0.0,0.0,6.78,-4.41,17.9,45.66,96.57,14.51,21.86,0.0,0.0,32.0,0.000263,60,1.0
+silero,local_user,nb8_ulaw_jb60,8 kHz mu-law + 60 ms fixed jitter buffer,60,60,0.0,60.0,63.12,53.83,72.81,39.34,152.13,14.51,77.25,64.0,64.0,64.0,8.41e-12,60,1.0
+silero,local_user,opus_nb_12k,"Opus 12 kbps, 4 kHz cutoff, at 8 kHz",60,60,0.0,0.09,82.03,76.54,86.81,40.2,139.25,14.51,105.02,96.0,64.0,96.0,1.63e-10,60,1.0
+silero,local_user,opus_wb_24k,"Opus 24 kbps, 8 kHz cutoff, at 16 kHz",60,60,0.0,0.0,47.59,26.78,53.97,49.59,100.25,14.51,59.46,32.0,32.0,64.0,2.3e-09,60,1.0
+silero,local_user,nb8_ulaw_snr20,8 kHz mu-law + 20 dB SNR line noise,60,60,0.0,0.0,23.66,11.93,52.2,124.12,229.42,14.51,37.76,32.0,0.0,96.0,1.41e-05,60,1.0
+silero,local_user,pstn_typical,Full PSTN leg: band + mu-law + 1% loss + 40 ms jitter,60,60,0.0,40.0,87.86,53.97,107.93,90.41,191.45,14.51,108.95,96.0,64.0,128.0,3.48e-11,60,1.0
+silero,local_user,pstn_poor,Degraded PSTN leg: band + mu-law + 5% bursty loss + 80 ms jitter,60,60,0.0,80.0,151.63,133.53,170.58,88.42,226.29,14.51,177.15,160.0,160.0,192.0,1.77e-11,60,1.0
+silero,wire,ref_16k,16 kHz PCM (offline file),60,60,0.0,0.0,-6.3,-10.78,4.01,31.3,67.94,14.51,13.66,0.0,0.0,0.0,,60,1.0
+silero,wire,nb8_ulaw,"8 kHz G.711 mu-law, VAD at 8 kHz",60,60,0.0,0.0,-0.1,-12.24,14.37,63.46,128.59,15.46,15.93,0.0,0.0,0.0,0.764,60,1.0
+silero,wire,nb8_ulaw_up16,"8 kHz G.711 mu-law, upsampled to 16 kHz before VAD",60,60,0.0,0.0,-0.1,-10.78,7.05,39.86,128.55,15.46,15.05,0.0,0.0,0.0,0.964,60,1.0
+silero,wire,nb8_alaw,"8 kHz G.711 A-law, VAD at 8 kHz",60,60,0.0,0.0,-4.41,-19.46,12.47,72.37,111.33,16.0,19.59,0.0,0.0,0.0,0.415,60,1.0
+silero,wire,nb8_ulaw_band,8 kHz G.711 mu-law + 300-3400 Hz PSTN band,60,60,0.0,0.0,22.71,7.05,61.56,96.73,159.45,14.37,83.19,32.0,0.0,64.0,0.000104,60,1.0
+silero,wire,nb8_ulaw_loss1,8 kHz mu-law + 1% frame loss (zero-fill),60,60,0.0,0.0,-0.1,-12.24,14.37,63.46,128.84,15.46,15.93,0.0,0.0,0.0,0.714,60,1.0
+silero,wire,nb8_ulaw_loss3,8 kHz mu-law + 3% frame loss (zero-fill),60,60,0.0,0.0,-0.1,-14.92,16.27,73.02,117.4,16.0,23.05,0.0,0.0,16.4,0.147,60,1.0
+silero,wire,nb8_ulaw_loss5,8 kHz mu-law + 5% frame loss (zero-fill),60,60,0.0,0.0,5.83,-9.15,24.0,102.09,161.87,17.49,32.47,0.0,0.0,32.0,0.0641,60,1.0
+silero,wire,nb8_ulaw_loss5_burst,"8 kHz mu-law + 5% bursty loss (Gilbert, zero-fill)",60,60,0.0,0.0,11.63,-8.41,46.51,117.1,133.63,17.49,56.51,16.0,0.0,48.0,0.00247,60,1.0
+silero,wire,nb8_ulaw_loss5_hold,8 kHz mu-law + 5% frame loss (zero-order-hold PLC),60,60,0.0,0.0,-1.12,-18.03,20.1,97.49,158.99,17.49,21.86,0.0,0.0,16.0,0.859,60,1.0
+silero,wire,nb8_ulaw_jb60,8 kHz mu-law + 60 ms fixed jitter buffer,60,60,0.0,60.0,1.59,-9.32,14.37,58.32,101.37,71.32,77.25,0.0,0.0,0.0,0.15,60,1.0
+silero,wire,opus_nb_12k,"Opus 12 kbps, 4 kHz cutoff, at 8 kHz",60,60,0.0,0.09,78.44,69.66,85.83,78.14,152.42,13.15,105.02,80.0,64.0,96.0,2.84e-09,60,1.0
+silero,wire,opus_wb_24k,"Opus 24 kbps, 8 kHz cutoff, at 16 kHz",60,60,0.0,0.0,45.22,22.1,53.97,49.59,100.25,15.86,59.46,32.0,32.0,64.0,7.67e-09,60,1.0
+silero,wire,nb8_ulaw_snr20,8 kHz mu-law + 20 dB SNR line noise,60,60,0.0,0.0,30.17,21.7,43.93,126.58,258.02,4.88,37.76,48.0,32.0,80.0,2.28e-06,60,1.0
+silero,wire,pstn_typical,Full PSTN leg: band + mu-law + 1% loss + 40 ms jitter,60,60,0.0,40.0,36.88,1.09,55.59,139.46,271.48,56.95,108.95,32.0,0.0,64.0,0.0614,60,1.0
+silero,wire,pstn_poor,Degraded PSTN leg: band + mu-law + 5% bursty loss + 80 ms jitter,60,60,0.0,80.0,36.51,0.34,64.34,113.39,269.9,124.61,177.15,64.0,0.0,96.0,0.0103,60,1.0
