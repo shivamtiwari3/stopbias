@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>shivamtiwari3 — Open Source</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --purple: #bc8cff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+  }
+  .deck { position: relative; width: 100vw; height: 100vh; }
+  .slide {
+    position: absolute; inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6vh 8vw;
+    animation: fade .35s ease;
+  }
+  .slide.active { display: flex; }
+  @keyframes fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.1; letter-spacing: -.02em; }
+  h2 { font-size: clamp(1.5rem, 3vw, 2.4rem); margin-bottom: 1.2rem; }
+  .accent { color: var(--accent); }
+  .muted { color: var(--muted); }
+
+  .cover .tag {
+    display: inline-block; font-size: .85rem; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--green); border: 1px solid var(--border);
+    padding: .35rem .9rem; border-radius: 999px; margin-bottom: 1.5rem;
+  }
+  .cover p.lead { font-size: clamp(1rem, 1.8vw, 1.35rem); color: var(--muted); margin-top: 1.5rem; max-width: 60ch; }
+
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.1rem 1.2rem; transition: border-color .2s, transform .2s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .card .repo { font-size: 1.15rem; font-weight: 600; color: var(--accent); margin-bottom: .4rem; }
+  .card .lang { font-size: .78rem; color: var(--purple); margin-bottom: .5rem; }
+  .card .desc { font-size: .92rem; color: var(--muted); line-height: 1.45; }
+  .card .stars { font-size: .78rem; color: var(--green); margin-top: .6rem; }
+
+  .feature { font-size: clamp(1.2rem, 2.2vw, 1.8rem); line-height: 1.4; max-width: 70ch; }
+  .feature .big { font-size: clamp(2.5rem, 7vw, 5.5rem); font-weight: 700; color: var(--accent); display: block; margin-bottom: 1rem; }
+
+  .kpis { display: flex; gap: 3rem; flex-wrap: wrap; margin-top: 2rem; }
+  .kpi .num { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; color: var(--accent); }
+  .kpi .lbl { color: var(--muted); font-size: .95rem; }
+
+  footer {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 2rem; font-size: .8rem; color: var(--muted);
+  }
+  .progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); width: 0; transition: width .3s; }
+  .nav button {
+    background: var(--panel); border: 1px solid var(--border); color: var(--text);
+    border-radius: 8px; padding: .45rem .8rem; cursor: pointer; margin-left: .5rem; font-size: .85rem;
+  }
+  .nav button:hover { border-color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="deck" id="deck">
+
+  <section class="slide cover active">
+    <span class="tag">Open Source Portfolio</span>
+    <h1>Shivam Tiwari<br><span class="accent">@shivamtiwari3</span></h1>
+    <p class="lead">A collection of open-source projects — from AI dev tools and knowledge graphs to urban intelligence, healthcare capacity, and voice-AI validity research.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="num">17</div><div class="lbl">Original repos</div></div>
+      <div class="kpi"><div class="num">5</div><div class="lbl">Languages</div></div>
+      <div class="kpi"><div class="num">2026</div><div class="lbl">Active</div></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="repo">keyway</div>
+        <div class="lang">JavaScript · ★ 1</div>
+        <div class="desc">Use any model in Claude Desktop — bring your own key. A tiny local BYOK gateway for OpenAI- or Anthropic-compatible providers.</div>
+      </div>
+      <div class="card">
+        <div class="repo">community-pulse</div>
+        <div class="lang">TypeScript</div>
+        <div class="desc">Which UAE neighbourhoods are short on schools, clinics, transit and parks — and what to build first. 33 districts, real OpenStreetMap data.</div>
+      </div>
+      <div class="card">
+        <div class="repo">Sanad</div>
+        <div class="lang">HTML</div>
+        <div class="desc">Dubai clinical capacity intelligence: bed and specialist gaps by district, 2026–2040 demand forecasts and planning briefs.</div>
+      </div>
+      <div class="card">
+        <div class="repo">stopbias</div>
+        <div class="lang">Python</div>
+        <div class="desc">Does offline voice-agent stop-latency measurement survive the phone network? A validity study: G.711, PSTN passband, Opus, packet loss.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>AI & Developer Tooling</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="repo">webengage-mcp</div>
+        <div class="lang">TypeScript</div>
+        <div class="desc">MCP to use WebEngage with natural language within Claude Desktop / Cursor / Antigravity.</div>
+      </div>
+      <div class="card">
+        <div class="repo">claude-skills</div>
+        <div class="desc">Claude Code skills for daily workflows — cold email, content, sprint summaries, and more.</div>
+      </div>
+      <div class="card">
+        <div class="repo">keyway</div>
+        <div class="lang">JavaScript · ★ 1</div>
+        <div class="desc">Local BYOK gateway for OpenAI- or Anthropic-compatible providers in Claude Desktop.</div>
+      </div>
+      <div class="card">
+        <div class="repo">hobbycloud</div>
+        <div class="desc">A cloud for small software: private internal apps with brokered credentials and spend ceilings. Product spec, written in the open.</div>
+      </div>
+      <div class="card">
+        <div class="repo">Chiefofstaff</div>
+        <div class="desc">Your EA to manage personal tasks and add more and more context.</div>
+      </div>
+      <div class="card">
+        <div class="repo">cos-mu</div>
+        <div class="desc">chief</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Urban & Public-Sector Intelligence</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="repo">community-pulse</div>
+        <div class="lang">TypeScript</div>
+        <div class="desc">UAE neighbourhood infrastructure gaps — schools, clinics, transit, parks — from real OpenStreetMap data.</div>
+      </div>
+      <div class="card">
+        <div class="repo">Expand</div>
+        <div class="lang">TypeScript</div>
+        <div class="desc">See what every area in the UAE is missing — and where to build next.</div>
+      </div>
+      <div class="card">
+        <div class="repo">Sanad</div>
+        <div class="lang">HTML</div>
+        <div class="desc">Dubai clinical capacity intelligence with 2026–2040 demand forecasts and planning briefs.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Applications & Experiments</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="repo">valentinespeciall</div>
+        <div class="lang">TypeScript · ★ 1</div>
+        <div class="desc">Helping users create a personalised experience for their loved ones.</div>
+      </div>
+      <div class="card">
+        <div class="repo">EMRMVP</div>
+        <div class="lang">PHP</div>
+        <div class="desc">An EMR (electronic medical records) management platform.</div>
+      </div>
+      <div class="card">
+        <div class="repo">taskmanagement</div>
+        <div class="lang">JavaScript</div>
+        <div class="desc">Task management system from sheet.</div>
+      </div>
+      <div class="card">
+        <div class="repo">Givastoreexperience</div>
+        <div class="lang">HTML</div>
+        <div class="desc">Store-experience-summary.</div>
+      </div>
+      <div class="card">
+        <div class="repo">Google-AI-studio-testing</div>
+        <div class="lang">TypeScript</div>
+        <div class="desc">Random app from Google AI studio.</div>
+      </div>
+      <div class="card">
+        <div class="repo">test-todo2</div>
+        <div class="lang">JavaScript</div>
+        <div class="desc">Experiment.</div>
+      </div>
+      <div class="card">
+        <div class="repo">shivamtiwari3</div>
+        <div class="desc">Profile README.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="feature">
+      <span class="big">Let's build.</span>
+      Explore the full collection on GitHub — contributions, issues, and ideas welcome.
+      <p class="lead muted" style="margin-top:1.5rem;font-size:1.1rem;">github.com/shivamtiwari3</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span id="counter">1 / 6</span>
+  <div class="nav">
+    <button onclick="go(-1)">← Prev</button>
+    <button onclick="go(1)">Next →</button>
+  </div>
+</footer>
+
+<script>
+  const slides = [...document.querySelectorAll('.slide')];
+  let i = 0;
+  const counter = document.getElementById('counter');
+  const progress = document.getElementById('progress');
+
+  function render() {
+    slides.forEach((s, n) => s.classList.toggle('active', n === i));
+    counter.textContent = `${i + 1} / ${slides.length}`;
+    progress.style.width = `${((i + 1) / slides.length) * 100}%`;
+  }
+  function go(dir) { i = Math.min(slides.length - 1, Math.max(0, i + dir)); render(); }
+
+  document.addEventListener('keydown', e => {
+    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown'].includes(e.key)) { e.preventDefault(); go(1); }
+    if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); go(-1); }
+  });
+  document.getElementById('deck').addEventListener('click', e => go(1));
+  render();
+</script>
+</body>
+</html>
